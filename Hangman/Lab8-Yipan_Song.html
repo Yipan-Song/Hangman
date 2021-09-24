@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hangman</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="Lab8-Yipan_Song.js" defer></script>
+    <link href="Lab8-Yipan_Song.css" rel="stylesheet" type="text/css" />
+</head>
+<body  onload="getAnswer(), getKeyboard()">
+<p><img id="picture" src = "Hangman1.png" alt = "The hangman"/></p>
+<div id="main">
+    <h1>Hangman</h1>
+    <p>Please input the letters you guess</p>
+    <p id="guess"></p>
+    <p>The wrong letters you have input:</p>
+    <p id="wrong"></p>
+    <p>Please choose a category</p>
+    <select id="words" onchange="getAnswer()">
+        <option value="1">Animal Words</option>
+        <option value="2">Occupation Words</option>
+        <option value="3">Food Words</option>
+    </select>
+    <h2 id="live">You have 6 chances!</h2>
+    <h2 id="game">Fighting!</h2>
+    <p><button type="reset" id="reset" onclick="gameReset()">Play Again</button></p>
+</div>
+<div id="keyboard">
+</div>
+</body>
+</html>
